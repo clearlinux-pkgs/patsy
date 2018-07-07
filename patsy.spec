@@ -4,12 +4,12 @@
 #
 Name     : patsy
 Version  : 0.5.0
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/8b/c7/c3f6ae21cd9bde9b434ffc5a451e2ba657a5a062d21ee41fe9990c739013/patsy-0.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8b/c7/c3f6ae21cd9bde9b434ffc5a451e2ba657a5a062d21ee41fe9990c739013/patsy-0.5.0.tar.gz
 Summary  : A Python package for describing statistical models and for building design matrices.
 Group    : Development/Tools
-License  : 2-clause BSD-2-Clause
+License  : BSD-2-Clause
 Requires: patsy-python3
 Requires: patsy-license
 Requires: patsy-python
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530978367
+export SOURCE_DATE_EPOCH=1530978524
 find -name "*pyx" | xargs touch ||:
 python3 setup.py build -b py3
 
