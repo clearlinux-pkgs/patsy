@@ -4,7 +4,7 @@
 #
 Name     : patsy
 Version  : 0.5.0
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/8b/c7/c3f6ae21cd9bde9b434ffc5a451e2ba657a5a062d21ee41fe9990c739013/patsy-0.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8b/c7/c3f6ae21cd9bde9b434ffc5a451e2ba657a5a062d21ee41fe9990c739013/patsy-0.5.0.tar.gz
 Summary  : A Python package for describing statistical models and for building design matrices.
