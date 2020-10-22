@@ -4,7 +4,7 @@
 #
 Name     : patsy
 Version  : 0.5.1
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/49/c7/b971d8685c52512dbaa45bf8d076695432245a9f59509fb20a6c8e4ff69a/patsy-0.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/49/c7/b971d8685c52512dbaa45bf8d076695432245a9f59509fb20a6c8e4ff69a/patsy-0.5.1.tar.gz
 Summary  : A Python package for describing statistical models and for building design matrices.
@@ -25,44 +25,8 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-Patsy is a Python library for describing statistical models
 (especially linear models, or models that have a linear component) and
-building design matrices. Patsy brings the convenience of `R
-<http://www.r-project.org/>`_ "formulas" to Python.
-
-.. image:: https://travis-ci.org/pydata/patsy.png?branch=master
-   :target: https://travis-ci.org/pydata/patsy
-.. image:: https://coveralls.io/repos/pydata/patsy/badge.png?branch=master
-   :target: https://coveralls.io/r/pydata/patsy?branch=master
-
-Documentation:
-  https://patsy.readthedocs.io/
-
-Downloads:
-  http://pypi.python.org/pypi/patsy/
-
-Dependencies:
-  * Python (2.6, 2.7, or 3.3+)
-  * six
-  * numpy
-
-Optional dependencies:
-  * nose: needed to run tests
-  * scipy: needed for spline-related functions like ``bs``
-
-Install:
-  ``pip install patsy`` (or, for traditionalists: ``python setup.py install``)
-
-Code and bug tracker:
-  https://github.com/pydata/patsy
-
-Mailing list:
-  * pydata@googlegroups.com
-  * http://groups.google.com/group/pydata
-  * http://news.gmane.org/gmane.comp.python.pydata
-
-License:
-  2-clause BSD, see LICENSE.txt for details.
+        building design matrices. Patsy brings the convenience of `R
 
 %package license
 Summary: license components for the patsy package.
@@ -86,6 +50,8 @@ Summary: python3 components for the patsy package.
 Group: Default
 Requires: python3-core
 Provides: pypi(patsy)
+Requires: pypi(numpy)
+Requires: pypi(six)
 
 %description python3
 python3 components for the patsy package.
@@ -100,12 +66,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583201334
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603398131
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
